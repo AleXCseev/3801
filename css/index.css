@@ -1515,7 +1515,7 @@ label {
   .advantages .item {
     max-width: 300px;
     width: 100%;
-    margin: 0 auto 40px;
+    margin: 0 auto;
   }
 }
 
@@ -1577,6 +1577,14 @@ label {
 @media (max-width: 991px) {
   .video-section {
     padding: 100px 0 140px;
+  }
+  .advantages .item--icon {
+    max-width: 100px;
+  }
+  .advantages .item--title {
+    font:
+      20px / 1.2 "MuseoSansCyrl-500",
+      sans-serif;
   }
 }
 
@@ -2370,6 +2378,13 @@ label {
   .gallery__title {
     top: 7vw;
     font-size: 6vw;
+    position: static;
+    text-align: center;
+    padding: 5vw 0 2vw;
+  }
+  .pic__logo {
+    width: 100%;
+    height: 100px !important;
   }
 }
 
@@ -3351,18 +3366,29 @@ label {
 @media (max-width: 500px) {
   .bottom-section .section-title {
     font-size: 30px;
+    margin-bottom: 10px;
   }
 }
 
 .bottom-section .logo-box {
-  margin-bottom: 0px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* opacity: 0.5; */
 }
 
-@media (max-width: 500px) {
+@media (max-width: 1080px) {
   .bottom-section .logo-box {
     margin-bottom: 0px;
   }
-  
+}
+
+@media (max-width: 540px) {
+  .bottom-section .logo-box {
+    opacity: 0.2;
+    margin-bottom: -90px;
+  }
 }
 
 .bottom-section .boots {
