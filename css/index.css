@@ -1189,10 +1189,46 @@ label {
 
 /***** header *****/
 .header {
-  height: 842px;
-  padding-top: 30px;
-  background: #cbdadd url(../img/header-bg.jpg) no-repeat 50% 100%;
-  background-size: 1920px;
+  height: auto;
+  padding: 50px 0 80px;
+  background-color: #e9e9e9;
+  position: relative;
+  z-index: 1;
+}
+
+.header:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-image: url(../img/header-bg-new.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.5;
+}
+
+.header__content {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.header__boot {
+  width: 80%;
+  height: auto;
+  margin: -120px 0 -80px;
+}
+
+.header .price__current {
+  color: #706b05;
 }
 
 @media (max-width: 1199px) {
@@ -1201,19 +1237,41 @@ label {
   }
 }
 
+.header__logo {
+  /* position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%); */
+  /* z-index: -1; */
+  display: none;
+}
+
 @media (max-width: 991px) {
   .header {
     height: 700px;
     background-size: 1400px;
     background-position: 47% 100%;
   }
+  .header__boot {
+    width: 100%;
+    height: auto;
+    margin: -100px 0 -60px;
+  }
 }
 
 @media (max-width: 767px) {
   .header {
     height: auto;
-    padding-top: 0;
-    background: #0b0728;
+    padding: 60px 0;
+    /* background: #0b0728; */
+  }
+  .header .section-title {
+    text-align: center;
+  }
+  .header__boot {
+    width: 100%;
+    height: auto;
+    margin: -40px 0 -30px;
   }
 }
 
@@ -1235,6 +1293,11 @@ label {
 @media (max-width: 575px) {
   .header .top-box {
     padding-bottom: 60vw;
+  }
+  .header__logo {
+    width: 50vw;
+    display: block;
+    margin-bottom: -13vw;
   }
 }
 
@@ -1407,12 +1470,12 @@ label {
 }
 
 .header .btn-box {
-  position: absolute;
+  /* position: absolute;
   bottom: 30px;
   left: 50%;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
+  transform: translateX(-50%); */
 }
 
 @media (max-width: 767px) {
